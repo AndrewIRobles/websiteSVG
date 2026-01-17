@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3"/>
+
+  <!-- Clipboard -->
+  <rect x="52" y="52" width="16" height="20" rx="3"
+        fill="white" stroke="#2A85BE" stroke-width="2.6"/>
+
+  <!-- Clip -->
+  <rect x="56.5" y="49.5" width="7" height="5" rx="2"
+        fill="white" stroke="#273A7F" stroke-width="2.2"/>
+
+  <!-- Audit lines -->
+  <path d="M55.5 58.5H64.5" stroke="#BCBEC0" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M55.5 62.5H63.0" stroke="#BCBEC0" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M55.5 66.5H62.0" stroke="#BCBEC0" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Check mark corner -->
+  <path d="M62.2 70.0L63.8 71.6L66.9 68.5"
+        stroke="#0CBB19" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

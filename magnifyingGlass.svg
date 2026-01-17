@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Core boundary -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3"/>
+
+  <!-- Magnifying glass lens -->
+  <circle cx="58" cy="58" r="8"
+          fill="white" stroke="#2A85BE" stroke-width="2.4"/>
+
+  <!-- Handle -->
+  <path d="M63.5 63.5L69 69"
+        stroke="#273A7F" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- Inner analysis mark (subtle bars) -->
+  <path d="M55.5 60.5V57.5M58 60.5V55.8M60.5 60.5V58.8"
+        stroke="#BCBEC0" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Core circle (same footprint) -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3" fill="white"/>
+
+  <!-- Pie slices (filled with Balboa colors) -->
+  <!-- Big slice: Blue -->
+  <path d="M60 60 L60 46 A14 14 0 0 1 72.1 53.0 Z" fill="#2A85BE"/>
+  <!-- Medium slice: Navy -->
+  <path d="M60 60 L72.1 53.0 A14 14 0 0 1 67.5 73.5 Z" fill="#273A7F"/>
+  <!-- Small slice: Green -->
+  <path d="M60 60 L67.5 73.5 A14 14 0 0 1 56.0 73.2 Z" fill="#0CBB19"/>
+  <!-- Remaining slice: Gray -->
+  <path d="M60 60 L56.0 73.2 A14 14 0 0 1 60 46 Z" fill="#BCBEC0"/>
+
+  <!-- Pie outline -->
+  <circle cx="60" cy="60" r="14" stroke="#273A7F" stroke-width="2.4" fill="none"/>
+
+  <!-- Slice separators (optional but helps legibility) -->
+  <!-- <path d="M60 60 L60 46" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 60 L72.1 53.0" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 60 L67.5 73.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 60 L56.0 73.2" stroke="white" stroke-width="2" stroke-linecap="round"/> -->
+</svg>

@@ -1,0 +1,15 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3"/>
+
+  <text x="60" y="58.5" text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="9" font-weight="800" fill="#273A7F">
+    GDPR
+  </text>
+
+  <text x="60" y="67.5" text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="7" font-weight="700" fill="#0cbb19">
+    COMPLIANT
+  </text>
+</svg>

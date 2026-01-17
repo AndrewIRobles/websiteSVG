@@ -1,0 +1,49 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid ecosystem ring -->
+  <circle cx="60" cy="60" r="36" stroke="#BCBEC0" stroke-width="2.5"/>
+
+  <!-- Outer nodes -->
+  <circle cx="60" cy="24" r="9.5" stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="28" cy="82" r="9.5" stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="92" cy="82" r="9.5" stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+
+  <!-- TOP NODE: Plane (centered in the node circle) -->
+  <path d="M60 18.2L61.9 22.4L66.2 24.0L61.9 25.0L60 29.8L58.1 25.0L53.8 24.0L58.1 22.4L60 18.2Z"
+        stroke="#273A7F" stroke-width="2" fill="white" stroke-linejoin="round"/>
+
+  <!-- LEFT NODE: Hotel (building) -->
+  <rect x="24.3" y="78.2" width="7.4" height="8.8" rx="1.3"
+        stroke="#273A7F" stroke-width="2" fill="white"/>
+  <path d="M26.2 80.4H29.8M26.2 82.6H29.8M26.2 84.8H28.4"
+        stroke="#2A85BE" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- RIGHT NODE: Train (replaces car, no green) -->
+  <!-- body -->
+  <rect x="87.0" y="78.6" width="10.0" height="6.8" rx="1.6"
+        stroke="#273A7F" stroke-width="2" fill="white"/>
+  <!-- cab window -->
+  <rect x="88.4" y="80.1" width="3.2" height="2.4" rx="0.6"
+        stroke="#2A85BE" stroke-width="1.6" fill="white"/>
+  <!-- front light -->
+  <circle cx="96.1" cy="82.0" r="0.9" fill="#273A7F"/>
+  <!-- wheels -->
+  <circle cx="90.0" cy="86.0" r="1.2" fill="#273A7F"/>
+  <circle cx="94.0" cy="86.0" r="1.2" fill="#273A7F"/>
+  <!-- track line -->
+  <path d="M86.8 87.6H97.2" stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Central core -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3" fill="white"/>
+
+  <!-- Globe -->
+  <circle cx="60" cy="60" r="9.8" stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <path d="M50.2 60H69.8" stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 50.2C56.8 53.2 56.8 66.8 60 69.8"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 50.2C63.2 53.2 63.2 66.8 60 69.8"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M52.6 56.2C56.6 57.8 63.4 57.8 67.4 56.2"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M52.6 63.8C56.6 62.2 63.4 62.2 67.4 63.8"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Traveler Dashboard</title>
+
+  <style>
+    :root{
+      /* Brand palette */
+      --navy: #273a7f;
+      --green: #0cbb19;
+      --slate: #2a3442;
+      --gray: #5e6367;
+      --line: #bcbec0;
+      --blue: #2a85be;
+      --teal: #4bacc6;
+
+      /* Light theme tokens */
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --card-2: #fbfcff;
+      --text: #111827;
+      --muted: #5e6367;
+      --shadow: 0 12px 28px rgba(42,52,66,.12);
+      --shadow-soft: 0 10px 18px rgba(42,52,66,.08);
+      --radius: 16px;
+
+      /* ONLY NEW: layout vars for sidebar */
+      --sidebar-w: 220px;
+      --gap: 16px;
+    } 
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin:0;
+   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: 14px;
+      background:
+        radial-gradient(1200px 700px at 15% -15%, rgba(75, 172, 198, 0.18), transparent 55%),
+        radial-gradient(900px 600px at 90% 10%, rgba(42, 133, 190, 0.14), transparent 60%),
+       linear-gradient(180deg, #bcbec0 0%, #2a3442 100%);
+
+      color: var(--text);
+    }
+
+    /* ============================
+       ONLY NEW: sidebar layout
+       ============================ */
+    .layout{
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 22px 18px 28px;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      gap: var(--gap);
+      align-items: start;
+    }
+
+    .sidebar{
+      position: sticky;
+      top: 12px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(188,190,192,.35);
+      /* same as your topbar */
+      background: linear-gradient(180deg, rgba(39,58,127,.99));
+      box-shadow: var(--shadow-soft);
+      padding: 12px;
+      color: #fff;
+      min-height: calc(100vh - 44px);
+    }
+
+    .sidebar .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 10px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+      margin-bottom: 12px;
+    }
+    .sidebar .mark{
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(75,172,198,.28), rgba(42,133,190,.18));
+    }
+    .sidebar .name{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width:0;
+    }
+    .sidebar .name strong{
+      font-size: 13px;
+      letter-spacing: .2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .sidebar .name small{
+      font-size: 11px;
+      color: rgba(255,255,255,.72);
+      font-weight: 700;
+    }
+
+    .nav{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      padding: 8px 2px;
+    }
+
+    .nav a{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      text-decoration:none;
+      color: rgba(255,255,255,.95);
+      font-weight: 900;
+      letter-spacing: .1px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+    }
+    .nav a:hover{
+      background: rgba(255,255,255,.10);
+      border-color: rgba(255,255,255,.18);
+      transform: translateY(-1px);
+    }
+    .nav a.active{
+      background: linear-gradient(135deg, rgba(75,172,198,.22), rgba(42,133,190,.16));
+      border-color: rgba(255,255,255,.18);
+      box-shadow: 0 10px 18px rgba(0,0,0,.18);
+    }
+    .nav .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.85);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.10);
+      flex: 0 0 auto;
+    }
+
+    .main{
+      min-width: 0;
+    }
+
+    /* ============================
+       ONLY NEW: collapse behavior
+       ============================ */
+    .layout.sidebar-collapsed{
+      grid-template-columns: 1fr;
+    }
+    .layout.sidebar-collapsed .sidebar{
+      display: none;
+    }
+
+    /* ============================
+       YOUR EXISTING CSS BELOW
+       (UNCHANGED)
+       ============================ */
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding: 14px 14px;
+      border: 1px solid rgba(188,190,192,.35);
+      background: linear-gradient(180deg, rgba(39,58,127,.99));
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      position: sticky;
+      top: 12px;
+      z-index: 5;
+      color: #ffffff;
+    }
+
+    .topbar .title h1{ color:#fff !important; }
+    .topbar .title small{ color: rgba(255,255,255,0.75) !important; }
+
+    .title{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+  
+.title h1{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+font-size: 24px;
+  font-weight: 500;
+
+}
+    .title small{
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .top-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .icon-btn{
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      border: 1px solid rgba(188,190,192,.45);
+      background: white;
+      display:grid;
+      place-items:center;
+      box-shadow: 0 6px 14px rgba(42,52,66,.08);
+      cursor:pointer;
+    }
+    .avatar{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px 6px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(188,190,192,.45);
+      background: white;
+      box-shadow: 0 6px 14px rgba(42,52,66,.08);
+      cursor:pointer;
+    }
+    .dot-avatar{
+      width: 28px; height: 28px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(39,58,127,.18), rgba(75,172,198,.22));
+      border: 1px solid rgba(42,133,190,.35);
+      position: relative;
+    }
+    .dot-avatar::after{
+      content:"";
+      position:absolute;
+      right:-2px; bottom:-2px;
+      width:10px; height:10px;
+      border-radius:999px;
+      background: var(--green);
+      border: 2px solid white;
+    }
+
+    .section-label{
+      margin: 18px 2px 10px;
+      font-weight: 800;
+      color: var(--slate);
+      letter-spacing: .2px;
+      font-size: 12px;
+      text-transform: uppercase;
+      opacity: .9;
+    }
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .quick{
+      background: linear-gradient(180deg,rgba(5, 172, 198,.50) rgba(39,58,127,.99),rgba(39,58,127,.99));
+      border: 1px solid rgba(42,133,190,.20);
+      border-radius: var(--radius);
+      padding: 14px 14px;
+      box-shadow: var(--shadow-soft);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      min-height: 68px;
+        cursor: pointer;
+    }
+    .quick-arrow{
+  display:flex;
+  align-items:center;
+  color: rgba(255,255,255,.65); /* matches your card tone */
+}
+
+.quick-arrow svg{
+  stroke: currentColor;
+}
+
+    .quick-left{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .badge{
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(39,58,127,.14), rgba(75,172,198,.22));
+      border: 1px solid rgba(75,172,198,.40);
+      display:grid;
+      place-items:center;
+      flex: 0 0 auto;
+    }
+    .quick h3{
+      margin:0;
+      font-size: 14px;
+      color: var(--slate);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .go{
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(39,58,127,.99),rgba(5, 172, 198,.50),rgba(39,58,127,.70)); /* same as topbar */
+      border: 1px solid rgba(255,255,255,.25);
+      display:grid;
+      place-items:center;
+      flex: 0 0 auto;
+      cursor:pointer;
+    }
+    .go:hover{ border-color: rgba(42,133,190,.55); }
+
+    .main-grid{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid rgba(188,190,192,.35);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .card-head{
+      padding: 12px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom: 1px solid rgba(188,190,192,.28);
+      background: linear-gradient(180deg, rgba(39,58,127,.99), rgba(5, 172, 198,.50),rgba(39,58,127,.99));
+    }
+    .card-head .kicker{
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--slate);
+      text-transform: uppercase;
+      letter-spacing: .25px;
+    }
+    .pill{
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(12,187,25,.35);
+      background: rgba(12,187,25,.10);
+      color: #0b6f19;
+    }
+    .card-body{ padding: 14px; }
+
+    .trip-route{
+      border-radius: 14px;
+      border: 1px solid rgba(42,133,190,.22);
+      background: linear-gradient(180deg, rgba(39,58,127,.08), rgba(42,133,190,.05));
+      padding: 16px;
+    }
+    .route{
+      display:flex;
+      align-items:baseline;
+      gap: 10px;
+      font-weight: 1000;
+      letter-spacing: .6px;
+      color: var(--navy);
+      font-size: 28px;
+    }
+    .route .arrow{
+      font-size: 18px;
+      color: rgba(42,133,190,.95);
+      margin-top: 2px;
+    }
+    .meta{
+      margin-top: 10px;
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .actions{
+      margin-top: 12px;
+      display:flex;
+      gap: 10px;
+    }
+    .btn{
+      border: 1px solid rgba(188,190,192,.55);
+      background: white;
+      padding: 9px 12px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 12px;
+      cursor:pointer;
+      color: var(--slate);
+      box-shadow: 0 10px 18px rgba(42,52,66,.06);
+    }
+    .btn.primary{
+      border-color: rgba(42,133,190,.45);
+      background: linear-gradient(135deg, rgba(42,133,190,.10), rgba(75,172,198,.10));
+      color: var(--navy);
+    }
+
+    table{ width:100%; border-collapse: collapse; font-size: 13px; }
+    th, td{ padding: 10px 8px; border-bottom: 1px solid rgba(188,190,192,.30); text-align:left; }
+    th{ color: var(--slate); font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: .18px; }
+    td{ color: var(--gray); font-weight: 700; }
+
+    .news{ display:flex; flex-direction:column; gap: 10px; }
+    .news-item{
+      display:flex; gap: 10px; padding: 10px 10px;
+      border-radius: 14px; border: 1px solid rgba(188,190,192,.30);
+      background: linear-gradient(180deg, rgba(75,172,198,.06), rgba(255,255,255,1));
+    }
+    .news-bullet{
+      width: 10px; height: 10px; border-radius: 999px; background: var(--teal);
+      margin-top: 5px; flex: 0 0 auto; box-shadow: 0 0 0 4px rgba(75,172,198,.12);
+    }
+    .news-item strong{ color: var(--slate); font-weight: 1000; display:block; margin-bottom: 2px; font-size: 13px; }
+    .news-item span{ color: var(--gray); font-weight: 700; font-size: 12px; }
+
+    .map-card{ margin-top: 12px; height: 280px; position: relative; }
+    .map-surface{
+      height: 100%;
+      background:
+        radial-gradient(1200px 600px at 25% 0%, rgba(39,58,127,.10), transparent 55%),
+        radial-gradient(900px 520px at 85% 20%, rgba(75,172,198,.16), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,1), rgba(246,248,251,1));
+      border-top: 1px solid rgba(188,190,192,.28);
+      display:grid; place-items:center;
+      color: rgba(94,99,103,.95);
+      font-weight: 900;
+      letter-spacing: .2px;
+      padding: 12px;
+      text-align:center;
+    }
+
+    svg{ display:block; }
+    .stroke-blue{ stroke: var(--blue); }
+    .stroke-teal{ stroke: var(--teal); }
+    .stroke-navy{ stroke: var(--navy); }
+
+    @media (max-width: 1040px){
+      .layout{ grid-template-columns: 1fr; }
+      .sidebar{ position: static; min-height: auto; }
+    }
+    @media (max-width: 980px){
+      .quick-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .main-grid{ grid-template-columns: 1fr; }
+      .map-card{ height: 240px; }
+      .topbar{ position: static; }
+    }
+    .mark img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layout" id="layout">
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="mark">
+          <img src="./balboaWhiteLogo.png" alt="Balboa Connect" />
+        </div>
+
+        <div class="name">
+          <strong>Balboa Connect</strong>
+          <small>Traveler Menu</small>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="active" href="#home"><span class="dot"></span> Home</a>
+        <a href="#trip-library"><span class="dot"></span> Trip Library</a>
+        <a href="#tools"><span class="dot"></span> Tools</a>
+        <a href="#documents"><span class="dot"></span> Documents</a>
+      </nav>
+    </aside>
+
+    <main class="main" id="home">
+
+      <div class="topbar">
+        <div class="title">
+          <h1>Traveler Dashboard</h1>
+        </div>
+
+        <div class="top-actions">
+          <!-- ONLY NEW: sidebar toggle button (uses existing .icon-btn styling) -->
+          <button class="icon-btn" id="sidebarToggle" aria-label="Toggle sidebar" aria-controls="sidebar" aria-expanded="true">
+            <!-- hamburger icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="stroke-navy" stroke-width="2" aria-hidden="true">
+              <path d="M4 7h16" />
+              <path d="M4 12h16" />
+              <path d="M4 17h16" />
+            </svg>
+          </button>
+
+          <button class="icon-btn" aria-label="Notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="stroke-navy" stroke-width="2">
+              <path d="M15 17H9" />
+              <path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 7h18s-3 0-3-7" />
+            </svg>
+          </button>
+
+          <div class="avatar" aria-label="User menu">
+            <div class="dot-avatar" aria-hidden="true"></div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="stroke-navy" stroke-width="2" aria-hidden="true">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-label">Quick Links</div>
+      <div class="quick-grid" id="tools">
+                <div class="quick">
+          <div class="quick-left">
+            <div class="badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="stroke-blue" stroke-width="2">
+                <path d="M12 2v20" />
+                <path d="M4 7h16" />
+                <path d="M6 7l2 14h8l2-14" />
+              </svg>
+            </div>
+            <h3>Learn: Travel Policy</h3>
+          </div>  <span class="quick-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <path d="M9 6l6 6-6 6"/>
+    </svg>
+  </span>    
+        </div>
+                <div class="quick">
+          <div class="quick-left">
+            <div class="badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="stroke-blue" stroke-width="2">
+                <path d="M12 2l1.5 6L20 10l-6.5 2L12 18l-1.5-6L4 10l6.5-2L12 2z" />
+                <path d="M6 20l1-3" />
+                <path d="M18 20l-1-3" />
+              </svg>
+            </div>
+            <h3>Discover: Get Inspired</h3>
+          </div>
+     <span class="quick-arrow" aria-hidden="true">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <path d="M9 6l6 6-6 6"/>
+    </svg>
+  </span>       
+        </div>
+        <div class="quick">
+          <div class="quick-left">
+            <div class="badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="stroke-blue" stroke-width="2">
+                <path d="M4 19V5" />
+                <path d="M4 19h16" />
+                <path d="M8 16v-6" />
+                <path d="M12 16V8" />
+                <path d="M16 16v-3" />
+              </svg>
+            </div>
+            <h3>Plan: Travel Seasonality</h3>
+          </div>  <span class="quick-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <path d="M9 6l6 6-6 6"/>
+    </svg>
+  </span>    
+        </div>
+
+        <div class="quick">
+          <div class="quick-left">
+            <div class="badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="stroke-blue" stroke-width="2">
+                <path d="M7 21V3h10v18" />
+                <path d="M9 7h2" />
+                <path d="M13 7h2" />
+                <path d="M9 11h2" />
+                <path d="M13 11h2" />
+                <path d="M5 21h14" />
+              </svg>
+            </div>
+            <h3>Book: Online Booking</h3>
+          </div>  <span class="quick-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <path d="M9 6l6 6-6 6"/>
+    </svg>
+  </span>    
+        </div>
+
+
+
+      </div>
+
+      <div class="main-grid">
+        <div class="card">
+          <div class="card-head">
+            <div class="kicker">Upcoming Trip</div>
+            <div class="pill">In 3 days</div>
+          </div>
+          <div class="card-body">
+            <div class="trip-route">
+              <div class="route">
+                <span>SFO</span>
+                <span class="arrow">→</span>
+                <span>BOS</span>
+              </div>
+              <div class="meta">
+                <div>UA123 • Jul 20 • 8:00 AM</div>
+                <div>Economy</div>
+              </div>
+              <div class="actions">
+                <button class="btn primary">View itinerary</button>
+                <button class="btn">Email</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <div class="kicker">Tickets & Credits</div>
+            <div class="pill" style="border-color: rgba(42,133,190,.35); background: rgba(42,133,190,.10); color: var(--navy);">
+              Tickets
+            </div>
+          </div>
+          <div class="card-body">
+            <table>
+              <thead>
+                <tr>
+                  <th>Airline</th>
+                  <th>Ticket #</th>
+                  <th>Value</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>United</td>
+                  <td>016-1234567890</td>
+                  <td>$482.31</td>
+                  <td>Business</td>
+                </tr>
+                <tr>
+                  <td>United</td>
+                  <td>016-0987654321</td>
+                  <td>$128.90</td>
+                  <td>Personal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card" id="documents">
+          <div class="card-head">
+            <div class="kicker">Travel Related News</div>
+            <div class="pill" style="border-color: rgba(75,172,198,.35); background: rgba(75,172,198,.10); color: var(--slate);">
+              AI Generated
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="news">
+              <div class="news-item">
+                <div class="news-bullet"></div>
+                <div>
+                  <strong>Weather Delays</strong>
+                  <span>PNW rolling delays at SEA</span>
+                </div>
+              </div>
+
+              <div class="news-item">
+                <div class="news-bullet" style="background: var(--blue); box-shadow: 0 0 0 4px rgba(42,133,190,.14);"></div>
+                <div>
+                  <strong>Federal Advisory</strong>
+                  <span>Heightened screening</span>
+                </div>
+              </div>
+
+              <div class="news-item">
+                <div class="news-bullet" style="background: var(--green); box-shadow: 0 0 0 4px rgba(12,187,25,.12);"></div>
+                <div>
+                  <strong>Airline Strike Update</strong>
+                  <span>Some routes affected</span>
+                </div>
+              </div>
+
+              <div class="news-item">
+                <div class="news-bullet"></div>
+                <div>
+                  <strong>Weather Delays</strong>
+                  <span>Additional rolling delays</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card map-card" id="trip-library">
+        <div class="map-surface">
+          Map placeholder (drop your Leaflet/Mapbox container here)
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ONLY NEW: toggle script -->
+  <script>
+    (function(){
+      const layout = document.getElementById('layout');
+      const sidebar = document.getElementById('sidebar');
+      const btn = document.getElementById('sidebarToggle');
+
+      function setExpanded(isExpanded){
+        btn.setAttribute('aria-expanded', String(isExpanded));
+        layout.classList.toggle('sidebar-collapsed', !isExpanded);
+      }
+
+      btn.addEventListener('click', function(){
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        setExpanded(!expanded);
+      });
+
+      // default state = expanded (no other behavior changes)
+      setExpanded(true);
+    })();
+  </script>
+</body>
+</html>

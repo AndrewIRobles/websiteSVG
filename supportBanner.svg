@@ -1,0 +1,69 @@
+<svg viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1600" height="500" fill="#1a2332"/>
+  
+  <!-- Title -->
+  <text x="800" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="300" fill="#ffffff" text-anchor="middle" letter-spacing="1">High-Touch Service</text>
+  
+  <!-- Card 1: Dedicated Agent Teams -->
+  <rect x="110" y="160" width="310" height="220" rx="16" fill="#2a3544" opacity="0.8"/>
+  
+  <!-- Icon 1: Multiple users in geometric formation -->
+  <circle cx="265" cy="235" r="18" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+  <circle cx="265" cy="228" r="8" fill="#4a9eff"/>
+  <path d="M 250 250 Q 250 242 258 242 L 272 242 Q 280 242 280 250" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <circle cx="240" cy="245" r="14" fill="none" stroke="#6bb6ff" stroke-width="2"/>
+  <circle cx="240" cy="240" r="6" fill="#6bb6ff"/>
+  <path d="M 230 255 Q 230 249 236 249 L 244 249 Q 250 249 250 255" fill="none" stroke="#6bb6ff" stroke-width="2" stroke-linecap="round"/>
+  
+  <circle cx="290" cy="245" r="14" fill="none" stroke="#6bb6ff" stroke-width="2"/>
+  <circle cx="290" cy="240" r="6" fill="#6bb6ff"/>
+  <path d="M 280 255 Q 280 249 286 249 L 294 249 Q 300 249 300 255" fill="none" stroke="#6bb6ff" stroke-width="2" stroke-linecap="round"/>
+  
+  <text x="265" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#ffffff" text-anchor="middle">Dedicated Agent Teams</text>
+  
+  <!-- Card 2: 24/7 Support -->
+  <rect x="450" y="160" width="310" height="220" rx="16" fill="#2a3544" opacity="0.8"/>
+  
+  <!-- Icon 2: Clock with 24/7 -->
+  <circle cx="605" cy="240" r="30" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+  <line x1="605" y1="240" x2="605" y2="220" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="605" y1="240" x2="620" y2="240" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="605" cy="240" r="3" fill="#4a9eff"/>
+  
+  <!-- Subtle glow around clock -->
+  <circle cx="605" cy="240" r="38" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.3"/>
+  
+  <text x="605" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#ffffff" text-anchor="middle">24/7 Support</text>
+  
+  <!-- Card 3: VIP Agent Desk -->
+  <rect x="790" y="160" width="310" height="220" rx="16" fill="#2a3544" opacity="0.8"/>
+  
+  <!-- Icon 3: Shield with star -->
+  <path d="M 945 220 L 965 225 L 965 250 Q 965 260 945 265 Q 925 260 925 250 L 925 225 Z" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="945,233 948,241 956,241 950,246 952,254 945,249 938,254 940,246 934,241 942,241" fill="#4a9eff"/>
+  
+  <text x="945" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#ffffff" text-anchor="middle">VIP Agent Desk</text>
+  
+  <!-- Card 4: 18+ Years Experience -->
+  <rect x="1130" y="160" width="310" height="220" rx="16" fill="#2a3544" opacity="0.8"/>
+  
+  <!-- Icon 4: Award ribbon / medal -->
+  <circle cx="1285" cy="235" r="20" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+  <path d="M 1275 252 L 1270 268 L 1285 260 L 1300 268 L 1295 252" fill="#4a9eff" stroke="#4a9eff" stroke-width="1.5" stroke-linejoin="round"/>
+  
+  <!-- Star in center -->
+  <polygon points="1285,228 1287,233 1292,233 1288,236 1290,241 1285,238 1280,241 1282,236 1278,233 1283,233" fill="#1a2332"/>
+  
+  <!-- Number 18+ -->
+  <text x="1285" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1a2332" text-anchor="middle">18+</text>
+  
+  <text x="1285" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#ffffff" text-anchor="middle">18+ Years Experience</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="130" cy="180" r="2" fill="#4a9eff" opacity="0.4"/>
+  <circle cx="1470" cy="190" r="2" fill="#4a9eff" opacity="0.4"/>
+  <circle cx="470" cy="175" r="1.5" fill="#6bb6ff" opacity="0.5"/>
+  <circle cx="1110" cy="185" r="1.5" fill="#6bb6ff" opacity="0.5"/>
+</svg>

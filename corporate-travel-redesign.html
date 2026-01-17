@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Travel Services - Balboa Travel | Enterprise Travel Management</title>
+    <meta name="description" content="Balboa Travel delivers comprehensive corporate travel management through expert consulting, real-time analytics, global supplier access, and 24/7 support. Built for complex enterprise programs.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #1a2332;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: #2d3f5f;
+            padding: 1rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0CBB19;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: #0CBB19;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0a9515;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: #0CBB19;
+            color: #0CBB19;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 3rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #1a2332 0%, #26668E 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* Core Features - Consolidated 4-card grid */
+        .core-features {
+            padding: 4rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: #2a3847;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0CBB19 0%, #26668E 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            background: #313f51;
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #26668E 0%, #4A90E2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Two-Column Value Props */
+        .value-props {
+            background: #243041;
+            padding: 4rem 3rem;
+        }
+
+        .value-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .value-block {
+            background: #2a3847;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border-left: 4px solid #0CBB19;
+        }
+
+        .value-block h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: #0CBB19;
+            font-weight: 600;
+        }
+
+        .value-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .value-block li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.95rem;
+        }
+
+        .value-block li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #0CBB19;
+            font-weight: bold;
+        }
+
+        /* Use Case Tabs */
+        .use-cases {
+            padding: 4rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 0;
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            color: rgba(255,255,255,0.6);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: #0CBB19;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #0CBB19;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .use-case-card {
+            background: #2a3847;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .use-case-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #26668E 0%, #4A90E2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .use-case-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .use-case-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: linear-gradient(135deg, #0CBB19 0%, #26668E 100%);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat {
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 3rem;
+            background: linear-gradient(135deg, #1a2332 0%, #26668E 100%);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f1621;
+            padding: 2rem 3rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .use-case-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid,
+            .use-case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Balboa Travel</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/technology">Technology</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/solutions">Solutions</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="/login" class="btn btn-primary">Login</a>
+            <a href="/demo" class="btn btn-secondary">Request a Demo</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Corporate Travel, Simplified.</h1>
+        <p>A service-first model combining expert advisors, AI-driven analytics, global supplier access, and 24/7 support—designed for organizations that demand both flexibility and control.</p>
+        <div class="hero-cta">
+            <a href="/demo" class="btn btn-primary">Request a Demo</a>
+            <a href="#features" class="btn btn-secondary">Explore Features</a>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="core-features" id="features">
+        <div class="section-header">
+            <h2>Complete Corporate Travel Management</h2>
+            <p>Four integrated pillars that transform how enterprises manage business travel</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="ExpertConsultants.svg" alt="Expert Consultants" width="64" height="64">
+                </div>
+                <h3>Expert Consultants</h3>
+                <p>Trusted advisors bridging business goals with modern travel technology. Optimize spend and enhance traveler experience through strategic program guidance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="/path/to/analytics-icon.svg" alt="Actionable Analytics" width="64" height="64">
+                </div>
+                <h3>Actionable Analytics</h3>
+                <p>Real-time data highlighting cost avoidance opportunities, policy compliance, and duty-of-care insights. AI-driven analytics transform complex data into clear decisions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="/path/to/global-network-icon.svg" alt="Global Supplier Network" width="64" height="64">
+                </div>
+                <h3>Global Supplier Network</h3>
+                <p>Access traditional GDS and modern NDC-enabled fares for the widest selection of flights, hotels, and ground transportation worldwide.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="/path/to/support-icon.svg" alt="24/7 Support" width="64" height="64">
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock assistance ensuring travelers are supported at every stage—disruption management, itinerary changes, and emergency response.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props - Two Column -->
+    <section class="value-props">
+        <div class="value-container">
+            <div class="section-header">
+                <h2>Built for Your Stakeholders</h2>
+                <p>Delivering value across your organization</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-block">
+                    <h3>For Travel Managers</h3>
+                    <ul>
+                        <li>Program visibility and policy reinforcement through consolidated reporting</li>
+                        <li>Supplier negotiation support with marketplace insights</li>
+                        <li>Consistent service levels and policy application across all regions</li>
+                        <li>Advanced compliance tools for regulated industries</li>
+                    </ul>
+                </div>
+                <div class="value-block">
+                    <h3>For Travelers</h3>
+                    <ul>
+                        <li>Faster support during disruptions with clear itinerary access</li>
+                        <li>Multiple booking channels (online, phone, email)</li>
+                        <li>Help before, during, and after every trip</li>
+                        <li>VIP arrangements and time-critical booking protocols</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases with Tabs -->
+    <section class="use-cases">
+        <div class="section-header">
+            <h2>Designed for Complex Programs</h2>
+            <p>Scalable solutions for organizations with sophisticated travel needs</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('global')">Global Operations</button>
+            <button class="tab-btn" onclick="switchTab('compliance')">Policy & Compliance</button>
+            <button class="tab-btn" onclick="switchTab('volume')">High Volume</button>
+        </div>
+
+        <div id="global" class="tab-content active">
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">🌍</div>
+                    <h4>Multi-Region Programs</h4>
+                    <p>Coordinated global solutions that simplify international servicing with consolidated reporting across geographies.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🤝</div>
+                    <h4>Supplier Strategy</h4>
+                    <p>Guidance across airline, hotel, car, and ground program management with negotiation support and insights.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📈</div>
+                    <h4>Program Reporting</h4>
+                    <p>Consolidated data views and program-level analytics customized to your needs and existing systems.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="compliance" class="tab-content">
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏛️</div>
+                    <h4>Regulated Industries</h4>
+                    <p>Advanced policy configuration, exception handling, and compliance reporting for financial services, pharma, and government.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">✅</div>
+                    <h4>Approval Workflows</h4>
+                    <p>Complex approval chains with automated routing, escalation protocols, and audit trail documentation.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📋</div>
+                    <h4>Audit Support</h4>
+                    <p>Comprehensive booking records, policy adherence tracking, and customized reporting for internal and external audits.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="volume" class="tab-content">
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">⚡</div>
+                    <h4>Enterprise Scale</h4>
+                    <p>Infrastructure designed to handle high booking volumes with dedicated account support and priority routing.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏆</div>
+                    <h4>Time-Critical Needs</h4>
+                    <p>Rapid response protocols for last-minute travel, VIP arrangements, and emergency situations requiring immediate attention.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🔄</div>
+                    <h4>Disruption Management</h4>
+                    <p>Proactive monitoring and rebooking during weather events, airline issues, and other travel disruptions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Global Support</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Enterprise Clients</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Countries Served</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to modernize your corporate travel program?</h2>
+        <p>See how Balboa's service model, disruption support, Duty of Care options, and reporting tools come together—powered by Balboa Connect.</p>
+        <a href="/demo" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Request a Demo</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Balboa Travel. All rights reserved. | <a href="/privacy" style="color: inherit;">Privacy Policy</a> | <a href="/terms" style="color: inherit;">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

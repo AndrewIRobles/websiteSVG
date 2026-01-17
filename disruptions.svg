@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Core boundary -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3"/>
+
+  <!-- Status ring -->
+  <circle cx="60" cy="60" r="11"
+          fill="none" stroke="#BCBEC0" stroke-width="2.2"/>
+
+  <!-- Plane -->
+  <path d="M60 49L62 57H68L69 59H62L60 67L58 59H51L52 57H58L60 49Z"
+        fill="#2A85BE" stroke="#273A7F" stroke-width="1.6" stroke-linejoin="round"/>
+
+  <!-- Status check (can swap later for X / ! ) -->
+  <path d="M56 61L59 64L65 58"
+        stroke="#0CBB19" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

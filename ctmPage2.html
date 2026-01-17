@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Corporate Travel Management Services | Balboa Travel</title>
+  <meta name="description" content="Service-first corporate travel management backed by modern technology—policy compliance, traveler support, reporting & analytics, global programs, and expense integrations." />
+
+  <!-- Optional: Open Graph -->
+  <meta property="og:title" content="Corporate Travel Management Services | Balboa Travel" />
+  <meta property="og:description" content="Service-first corporate travel management backed by modern technology—policy compliance, traveler support, reporting & analytics, global programs, and expense integrations." />
+
+  <!-- Font (safe + simple). Remove if your site already loads Inter. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#273a7f;
+      --slate:#2a3442;
+      --gray:#5e6367;
+      --line:#bcbec0;
+      --blue:#2a85be;
+      --teal:#4bacc6;
+      --green:#118c1a;
+
+      --bg:#202938;            /* page background */
+      --panel:#232d3e;         /* primary panel */
+      --panel2:#1f2736;        /* darker panel */
+      --text:#ffffff;
+      --muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.58);
+
+      --radius:18px;
+      --radiusLg:26px;
+      --shadow: 0 18px 40px rgba(0,0,0,.25);
+      --border: 1px solid rgba(255,255,255,.12);
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(42,133,190,.18), transparent 55%),
+                  radial-gradient(900px 700px at 90% 10%, rgba(75,172,198,.14), transparent 55%),
+                  linear-gradient(180deg, #1b2330 0%, var(--bg) 40%, #1b2330 100%);
+      color: var(--text);
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ width:min(1180px, 92vw); margin:0 auto; }
+
+    /* Top nav (simple placeholder). If your site already has nav, remove this block. */
+    .topbar{
+      position:sticky; top:0; z-index:1000;
+      backdrop-filter: blur(10px);
+      background: rgba(31,39,54,.72);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 180px;
+    }
+    .brand img{ height:36px; width:auto; display:block; }
+    .navlinks{
+      display:none;
+      gap:18px;
+      color: rgba(255,255,255,.82);
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .navlinks a:hover{ color:#fff; }
+    .nav-cta{ display:flex; gap:10px; align-items:center; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 500;
+      font-size: 14px;
+      cursor:pointer;
+      transition: transform .12s ease, opacity .12s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn-primary{ background: var(--green); color:#fff; }
+    .btn-ghost{ background: rgba(17,140,26,.18); border-color: rgba(17,140,26,.55); color:#fff; }
+    .btn-outline{ background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.18); color:#fff; }
+
+    @media (min-width: 980px){
+      .navlinks{ display:flex; }
+    }
+
+    /* Hero */
+    .hero{
+      padding: 70px 0 20px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .hero-card{
+      border-radius: var(--radiusLg);
+      background: linear-gradient(145deg, rgba(39,58,127,.35), rgba(42,52,66,.55));
+      border: var(--border);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute; inset:-120px -140px auto auto;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(75,172,198,.35), transparent 60%);
+      transform: rotate(15deg);
+      pointer-events:none;
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
+      letter-spacing:.06em;
+      text-transform: uppercase;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:99px;
+      background: linear-gradient(180deg, var(--teal), var(--blue));
+      box-shadow: 0 0 0 4px rgba(75,172,198,.12);
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(34px, 4.8vw, 58px);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+    }
+    .lede{
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(15px, 1.8vw, 18px);
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    .proof{
+      margin-top: 16px;
+      display:flex;
+      flex-wrap: wrap;
+      gap:10px;
+      color: rgba(255,255,255,.70);
+      font-size: 13px;
+    }
+    .pill{
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .hero-actions{
+      margin-top: 18px;
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+    }
+
+    /* Right hero side: compact “what you get” */
+    .hero-side{
+      border-radius: var(--radiusLg);
+      background: linear-gradient(160deg, rgba(42,52,66,.70), rgba(31,39,54,.85));
+      border: var(--border);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .side-title{
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom: 10px;
+    }
+    .side-title h2{
+      margin:0;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(255,255,255,.92);
+    }
+    .badge{
+      font-size: 12px;
+      color: rgba(255,255,255,.74);
+      border: 1px solid rgba(255,255,255,.16);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+    }
+    .side-list{
+      display:grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .side-item{
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .side-item b{ display:block; font-size: 13px; }
+    .side-item span{ display:block; margin-top: 4px; font-size: 12.5px; color: var(--muted2); line-height:1.5; }
+
+    @media (max-width: 960px){
+      .hero-grid{ grid-template-columns: 1fr; }
+    }
+
+    /* Sticky jump nav */
+    .jump{
+      position: sticky;
+      top: 64px; /* under topbar */
+      z-index: 900;
+      margin-top: 14px;
+      background: rgba(31,39,54,.70);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 999px;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+    .jump-inner{
+      display:flex;
+      gap: 6px;
+      padding: 8px;
+      overflow:auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .jump a{
+      flex: 0 0 auto;
+      font-size: 13px;
+      color: rgba(255,255,255,.78);
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .jump a:hover{
+      color:#fff;
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.12);
+    }
+
+    /* Sections */
+    section{ padding: 46px 0; }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    h2{
+      margin:0;
+      font-size: clamp(20px, 2.6vw, 28px);
+      letter-spacing: -0.01em;
+      font-weight: 600;
+    }
+    .sub{
+      margin: 6px 0 0;
+      color: var(--muted);
+      line-height:1.65;
+      max-width: 70ch;
+      font-size: 15px;
+    }
+
+    .grid{
+      display:grid;
+      gap: 14px;
+    }
+    .grid-3{ grid-template-columns: repeat(3, 1fr); }
+    .grid-2{ grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 980px){
+      .grid-3{ grid-template-columns: 1fr; }
+      .grid-2{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(93,98,102,.28), rgba(42,52,66,.62));
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:after{
+      content:"";
+      position:absolute; inset:auto -40px -60px auto;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(42,133,190,.20), transparent 60%);
+      pointer-events:none;
+    }
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14.5px;
+    }
+    .bullets{
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,.74);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* Tabs */
+    .tabs{
+      border-radius: var(--radiusLg);
+      background: linear-gradient(160deg, rgba(42,52,66,.72), rgba(31,39,54,.88));
+      border: 1px solid rgba(255,255,255,.12);
+      overflow:hidden;
+    }
+    .tabbar{
+      display:flex;
+      gap: 8px;
+      padding: 12px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      flex-wrap: wrap;
+    }
+    .tabbtn{
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.82);
+      padding: 10px 12px;
+      border-radius: 999px;
+      cursor:pointer;
+      font-weight: 600;
+      font-size: 13px;
+      transition: background .12s ease, border-color .12s ease, transform .12s ease;
+    }
+    .tabbtn:hover{ transform: translateY(-1px); }
+    .tabbtn[aria-selected="true"]{
+      background: linear-gradient(90deg, rgba(42,133,190,.30), rgba(75,172,198,.22));
+      border-color: rgba(75,172,198,.55);
+      color:#fff;
+    }
+    .tabpanes{ padding: 18px; }
+    .pane{ display:none; }
+    .pane.active{ display:block; }
+    .pane-lede{
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14.8px;
+      max-width: 85ch;
+    }
+
+    /* Two-column “Global + Expense” */
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 980px){
+      .split{ grid-template-columns: 1fr; }
+    }
+    .chips{
+      margin-top: 12px;
+      display:flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip{
+      font-size: 12px;
+      color: rgba(255,255,255,.80);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding: 8px 10px;
+      border-radius: 999px;
+    }
+
+    /* “Dashboard” placeholder */
+    .dash{
+      border-radius: var(--radiusLg);
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
+        radial-gradient(900px 450px at 30% 0%, rgba(42,133,190,.18), transparent 55%),
+        radial-gradient(700px 420px at 90% 20%, rgba(75,172,198,.14), transparent 55%);
+      padding: 18px;
+      overflow:hidden;
+    }
+    .dash-top{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px;
+      margin-bottom: 12px;
+    }
+    .dash-title{
+      display:flex; align-items:center; gap:10px;
+      color: rgba(255,255,255,.92);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing:.02em;
+      text-transform: uppercase;
+    }
+    .spark{
+      width: 10px;height:10px;border-radius:99px;
+      background: var(--blue);
+      box-shadow: 0 0 0 5px rgba(42,133,190,.14);
+    }
+    .dash-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 12px;
+    }
+    @media (max-width: 980px){ .dash-grid{ grid-template-columns:1fr; } }
+    .dash-box{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(31,39,54,.55);
+      padding: 14px;
+      min-height: 140px;
+    }
+    .dash-box .label{
+      color: rgba(255,255,255,.70);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .bars{
+      display:grid;
+      gap: 8px;
+    }
+    .bar{
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .bar > i{
+      display:block;
+      height: 100%;
+      width: var(--w, 55%);
+      background: linear-gradient(90deg, rgba(42,133,190,.85), rgba(75,172,198,.85));
+    }
+
+    /* FAQ accordion */
+    details{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      padding: 12px 14px;
+    }
+    details summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+    details summary::-webkit-details-marker{ display:none; }
+    .faq-body{
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+    .chev{
+      width: 10px; height: 10px;
+      border-right: 2px solid rgba(255,255,255,.70);
+      border-bottom: 2px solid rgba(255,255,255,.70);
+      transform: rotate(45deg);
+      transition: transform .12s ease;
+      flex: 0 0 auto;
+      margin-left: auto;
+    }
+    details[open] .chev{ transform: rotate(225deg); }
+
+    /* CTA wedge */
+    .wedge{
+      border-radius: var(--radiusLg);
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        radial-gradient(900px 460px at 20% 20%, rgba(39,58,127,.45), transparent 58%),
+        radial-gradient(700px 420px at 90% 20%, rgba(17,140,26,.18), transparent 60%),
+        linear-gradient(145deg, rgba(42,52,66,.80), rgba(31,39,54,.92));
+      box-shadow: var(--shadow);
+      padding: 26px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      align-items:center;
+    }
+    @media (max-width: 980px){
+      .wedge{ grid-template-columns: 1fr; }
+    }
+    .wedge h2{ margin:0; }
+    .wedge p{ margin: 10px 0 0; color: var(--muted); line-height:1.65; }
+    .wedge-actions{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    @media (max-width: 980px){ .wedge-actions{ justify-content:flex-start; } }
+
+    /* Contact */
+    .contact{
+      border-radius: var(--radiusLg);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      padding: 22px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 980px){ .contact{ grid-template-columns:1fr; } }
+    label{ display:block; font-size: 12px; color: rgba(255,255,255,.72); margin: 12px 0 6px; }
+    input, textarea{
+      width:100%;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(31,39,54,.70);
+      padding: 12px 12px;
+      color:#fff;
+      outline:none;
+      font: inherit;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+    .small{ font-size: 12px; color: rgba(255,255,255,.62); line-height:1.5; margin-top: 10px; }
+
+    /* Footer */
+    footer{
+      padding: 28px 0 42px;
+      color: rgba(255,255,255,.70);
+      border-top: 1px solid rgba(255,255,255,.08);
+      margin-top: 28px;
+    }
+  </style>
+
+  <!-- Optional: FAQ Schema (helps SEO without adding visual length) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What does a corporate travel management company do?","acceptedAnswer":{"@type":"Answer","text":"A corporate travel management company helps organizations plan, book, and manage business travel with traveler support, policy workflows, supplier strategy, and reporting."}},
+      {"@type":"Question","name":"How do you support travelers during disruptions?","acceptedAnswer":{"@type":"Answer","text":"Balboa supports itinerary changes and cancellations, provides rebooking guidance, and escalates time-critical travel issues through service-first support and duty of care options."}},
+      {"@type":"Question","name":"Can you enforce travel policy and approvals?","acceptedAnswer":{"@type":"Answer","text":"Yes. Policy-aligned workflows, approvals, and exception handling can be implemented to balance compliance with traveler experience."}},
+      {"@type":"Question","name":"Do you support global travel programs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Balboa supports multi-location and international travel programs with consolidated reporting and consistent servicing."}},
+      {"@type":"Question","name":"What reporting do travel managers and finance teams get?","acceptedAnswer":{"@type":"Answer","text":"Custom reporting across spend, compliance, unused tickets, and stakeholder views (including sustainability reporting when needed)."}},
+      {"@type":"Question","name":"Do you integrate with expense platforms?","acceptedAnswer":{"@type":"Answer","text":"Yes. Balboa supports common expense platforms and corporate ERP configurations, including (but not limited to) Chrome River and PeopleSoft."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Simple nav (remove if your site already includes nav) -->
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#">
+        <img src="./logo.png" alt="Balboa Travel" />
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#">Technology</a>
+        <a href="#">Resources</a>
+        <a href="#">About</a>
+        <a href="#" style="font-weight:600;">Solutions</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="#contact">Client Login</a>
+        <a class="btn btn-ghost" href="#contact">Talk to Sales</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="wrap hero-grid">
+
+        <div class="hero-card">
+          <div class="kicker"><span class="dot"></span> Service first. Technology forward.</div>
+          <h1>Corporate Travel, Simplified.</h1>
+          <p class="lede">
+            High-touch support backed by modern travel technology—helping organizations reduce spend, strengthen policy compliance,
+            and keep travelers supported from booking through trip completion.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Talk to Sales</a>
+            <a class="btn btn-ghost" href="#contact">Request a Demo</a>
+            <a class="btn btn-outline" href="#contact">Client Login</a>
+          </div>
+
+          <div class="proof" aria-label="Key proof points">
+            <span class="pill">24/7 support</span>
+            <span class="pill">Policy controls</span>
+            <span class="pill">Reporting & analytics</span>
+            <span class="pill">Duty of care options</span>
+            <span class="pill">U.S.-based, worldwide support</span>
+          </div>
+        </div>
+
+        <aside class="hero-side" aria-label="Quick value summary">
+          <div class="side-title">
+            <h2>What you get</h2>
+            <span class="badge">Corporate Travel Management</span>
+          </div>
+
+          <div class="side-list">
+            <div class="side-item">
+              <b>Traveler Support</b>
+              <span>Service-first help across routine trips and disruptions—including time-critical itineraries.</span>
+            </div>
+            <div class="side-item">
+              <b>Policy & Approvals</b>
+              <span>Guardrails that protect the program while keeping booking workflows smooth.</span>
+            </div>
+            <div class="side-item">
+              <b>Reporting & Savings</b>
+              <span>Dashboards and documentation to measure compliance impact and cost avoidance.</span>
+            </div>
+            <div class="side-item">
+              <b>Global & Expense</b>
+              <span>Multi-location program support with expense/ERP-friendly data flow.</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- Sticky jump nav -->
+      <div class="wrap jump" aria-label="Jump navigation">
+        <div class="jump-inner">
+          <a href="#services">Overview</a>
+          <a href="#how">How Balboa Works</a>
+          <a href="#strategy">Program Strategy</a>
+          <a href="#global">Global & Expense</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Corporate Travel Management Services</h2>
+            <p class="sub">
+              Balboa helps organizations run a controlled, traveler-friendly travel program—built for real-world complexity,
+              stakeholder reporting needs, and traveler care.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Service-first support</h3>
+            <p>Experienced agents and advisors who handle real travel problems—fast—without losing program controls.</p>
+            <ul class="bullets">
+              <li>After-hours coverage and disruptions</li>
+              <li>VIP and time-critical itineraries</li>
+              <li>Escalations and complex changes</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Policy compliance</h3>
+            <p>Guardrails that protect the program while keeping travelers moving.</p>
+            <ul class="bullets">
+              <li>Approvals and exception handling</li>
+              <li>Consistent enforcement across teams</li>
+              <li>Compliance reporting for finance/procurement</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Reporting & analytics</h3>
+            <p>Clear reporting that turns travel data into decisions stakeholders can trust.</p>
+            <ul class="bullets">
+              <li>Spend, compliance, unused tickets</li>
+              <li>Sustainability reporting support (when needed)</li>
+              <li>Custom dashboards by role or department</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW BALBOA WORKS (TABS) -->
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>How Balboa Works</h2>
+            <p class="sub">One approach, three outcomes: supported travelers, controlled spend, and reporting that proves value.</p>
+          </div>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="How Balboa Works tabs">
+          <div class="tabbar">
+            <button class="tabbtn" role="tab" aria-selected="true" aria-controls="pane-support" id="tab-support" data-tab="support">
+              Traveler Support & Duty of Care
+            </button>
+            <button class="tabbtn" role="tab" aria-selected="false" aria-controls="pane-policy" id="tab-policy" data-tab="policy">
+              Policy & Approvals
+            </button>
+            <button class="tabbtn" role="tab" aria-selected="false" aria-controls="pane-reporting" id="tab-reporting" data-tab="reporting">
+              Reporting & Savings
+            </button>
+          </div>
+
+          <div class="tabpanes">
+            <div class="pane active" id="pane-support" role="tabpanel" aria-labelledby="tab-support">
+              <p class="pane-lede">
+                Support that moves fast—before, during, and after travel—especially when plans change.
+              </p>
+              <div class="grid grid-2">
+                <div class="card">
+                  <h3>Disruption-ready service</h3>
+                  <p>Coverage designed for the moments that matter: delays, cancellations, missed connections, and last-minute changes.</p>
+                  <ul class="bullets">
+                    <li>After-hours support options</li>
+                    <li>Rebooking guidance and escalation paths</li>
+                    <li>Traveler-first communication</li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <h3>Duty of care options</h3>
+                  <p>Support traveler wellbeing and visibility with duty of care tooling options aligned to your program.</p>
+                  <ul class="bullets">
+                    <li>Program-friendly traveler support</li>
+                    <li>Visibility and assistance workflows</li>
+                    <li>Designed for real-world operations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="pane" id="pane-policy" role="tabpanel" aria-labelledby="tab-policy">
+              <p class="pane-lede">
+                Guardrails that protect the program without creating friction for travelers.
+              </p>
+              <div class="grid grid-2">
+                <div class="card">
+                  <h3>Approvals & exceptions</h3>
+                  <p>Approval routing and exception handling that documents the “why”—not just the “no.”</p>
+                  <ul class="bullets">
+                    <li>Policy-aligned booking workflows</li>
+                    <li>Approval routing and audit-friendly tracking</li>
+                    <li>Exception capture for stakeholder reporting</li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <h3>Compliance reporting</h3>
+                  <p>Clear visibility for finance, procurement, and leadership—across teams, departments, and locations.</p>
+                  <ul class="bullets">
+                    <li>Compliance metrics by department</li>
+                    <li>Leakage and behavior insights</li>
+                    <li>Actionable next steps, not just charts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="pane" id="pane-reporting" role="tabpanel" aria-labelledby="tab-reporting">
+              <p class="pane-lede">
+                Clear reporting that turns travel data into decisions stakeholders can trust.
+              </p>
+              <div class="grid grid-2">
+                <div class="card">
+                  <h3>Stakeholder-ready dashboards</h3>
+                  <p>Consolidated views across air, hotel, car, rail, and fees—built for operational and executive audiences.</p>
+                  <ul class="bullets">
+                    <li>Spend and trend analysis</li>
+                    <li>Unused ticket visibility</li>
+                    <li>Sustainability reporting support (when needed)</li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <h3>Proving savings over time</h3>
+                  <p>Find non-compliance, policy friction, and avoidable spend—and document cost avoidance clearly.</p>
+                  <ul class="bullets">
+                    <li>Cost avoidance documentation</li>
+                    <li>Compliance impact reporting</li>
+                    <li>Procurement-friendly outputs</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STRATEGY -->
+    <section id="strategy">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Strategic Program Management</h2>
+            <p class="sub">Continuous improvement—measured, documented, and aligned to stakeholder expectations.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Program optimization</h3>
+            <p>Identify leakage and policy friction using travel patterns, spend trends, and traveler behavior.</p>
+          </div>
+          <div class="card">
+            <h3>Supplier negotiations</h3>
+            <p>Leverage market intelligence and program data to support airline/hotel/car strategy and negotiations.</p>
+          </div>
+          <div class="card">
+            <h3>Savings documentation</h3>
+            <p>Report cost avoidance, compliance lift, and procurement value in a format stakeholders can use.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;" class="dash" aria-label="Reporting dashboard placeholder">
+          <div class="dash-top">
+            <div class="dash-title"><span class="spark"></span> Reporting & Analytics Preview</div>
+            <span class="badge">Sample View</span>
+          </div>
+
+          <div class="dash-grid">
+            <div class="dash-box">
+              <div class="label">Spend by category (example)</div>
+              <div class="bars">
+                <div class="bar"><i style="--w:72%"></i></div>
+                <div class="bar"><i style="--w:54%"></i></div>
+                <div class="bar"><i style="--w:38%"></i></div>
+                <div class="bar"><i style="--w:64%"></i></div>
+              </div>
+              <p style="margin:12px 0 0; color: rgba(255,255,255,.68); line-height:1.6; font-size:13.5px;">
+                Swap this placeholder for a real screenshot or embed from Balboa Connect when available.
+              </p>
+            </div>
+
+            <div class="dash-box">
+              <div class="label">What stakeholders ask for</div>
+              <ul class="bullets" style="margin-top:0;">
+                <li>Policy compliance & exceptions</li>
+                <li>Unused tickets and recoverables</li>
+                <li>Cost avoidance documentation</li>
+                <li>Sustainability reporting support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GLOBAL + EXPENSE (MERGED) -->
+    <section id="global">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Global Programs & Expense Integrations</h2>
+            <p class="sub">Support multi-location travel programs with consistent service, consolidated reporting, and expense-friendly data flow.</p>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="card">
+            <h3>Global program support</h3>
+            <p>Designed for complex organizations with multiple regions, departments, and policy needs.</p>
+            <ul class="bullets">
+              <li>Program governance across locations</li>
+              <li>Supplier strategy support across categories</li>
+              <li>Consolidated reporting for systemwide visibility</li>
+              <li>Consistent traveler support worldwide</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Expense & ERP alignment</h3>
+            <p>
+              Balboa supports common expense platforms and corporate ERP configurations, so travel and expense data flows where teams already work.
+            </p>
+            <div class="chips" aria-label="Integration examples">
+              <span class="chip">Chrome River</span>
+              <span class="chip">PeopleSoft</span>
+              <span class="chip">Concur</span>
+              <span class="chip">SAP</span>
+              <span class="chip">Oracle</span>
+              <span class="chip">Custom ERP</span>
+            </div>
+            <p style="margin-top:10px; color: rgba(255,255,255,.68); line-height:1.6; font-size:13.5px;">
+              (If you want to be extra safe on claims, keep this as “examples” and avoid listing anything you don’t truly support.)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Corporate Travel Management FAQ</h2>
+            <p class="sub">Quick answers stakeholders ask before switching or scaling a travel program.</p>
+          </div>
+        </div>
+
+        <div class="grid" style="gap:10px;">
+          <details>
+            <summary>What does a corporate travel management company do?<span class="chev"></span></summary>
+            <div class="faq-body">
+              A corporate travel management company helps organizations plan, book, and manage business travel with traveler support, policy workflows, supplier strategy, and reporting.
+            </div>
+          </details>
+
+          <details>
+            <summary>How do you support travelers during disruptions?<span class="chev"></span></summary>
+            <div class="faq-body">
+              Balboa supports itinerary changes and cancellations, helps travelers rebook quickly, and escalates time-critical travel issues through service-first support and duty of care options.
+            </div>
+          </details>
+
+          <details>
+            <summary>Can you enforce travel policy and approvals?<span class="chev"></span></summary>
+            <div class="faq-body">
+              Yes. Policy-aligned workflows, approval routing, and exception handling can be implemented to balance compliance with traveler experience.
+            </div>
+          </details>
+
+          <details>
+            <summary>Do you support global travel programs?<span class="chev"></span></summary>
+            <div class="faq-body">
+              Yes. Balboa supports multi-location and international travel programs with consolidated reporting and consistent servicing.
+            </div>
+          </details>
+
+          <details>
+            <summary>What reporting do travel managers and finance teams get?<span class="chev"></span></summary>
+            <div class="faq-body">
+              Custom reporting across spend, compliance, unused tickets, and stakeholder-specific views (including sustainability reporting support when needed).
+            </div>
+          </details>
+
+          <details>
+            <summary>Do you integrate with expense platforms?<span class="chev"></span></summary>
+            <div class="faq-body">
+              Balboa supports common expense platforms and corporate ERP configurations, including (but not limited to) Chrome River and PeopleSoft.
+            </div>
+          </details>
+
+          <details>
+            <summary>What makes Balboa different?<span class="chev"></span></summary>
+            <div class="faq-body">
+              Service-first support backed by modern technology—designed for real-world program complexity, not just bookings.
+            </div>
+          </details>
+
+          <details>
+            <summary>How do we get started?<span class="chev"></span></summary>
+            <div class="faq-body">
+              We’ll review your current program, goals, traveler profile, and systems, then map a rollout plan aligned to your policy and reporting needs.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA WEDGE -->
+    <section>
+      <div class="wrap">
+        <div class="wedge">
+          <div>
+            <h2>Ready to modernize your corporate travel program?</h2>
+            <p>
+              See how Balboa’s service model, disruption support, duty of care options, and reporting tools come together—supported by Balboa Connect.
+            </p>
+          </div>
+          <div class="wedge-actions">
+            <a class="btn btn-primary" href="#contact">Talk to Sales</a>
+            <a class="btn btn-ghost" href="#contact">Request a Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (NOTE: H2, not H1) -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Let’s start the conversation.</h2>
+            <p class="sub">Tell us what you’re trying to improve—compliance, traveler experience, reporting, or global scale—and we’ll show a clear path forward.</p>
+          </div>
+        </div>
+
+        <div class="contact" role="form" aria-label="Contact form">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+
+            <label for="email">Work email</label>
+            <input id="email" type="email" placeholder="name@company.com" />
+
+            <label for="company">Company</label>
+            <input id="company" type="text" placeholder="Company name" />
+
+            <p class="small">
+              U.S.-based corporate travel management, supporting travelers worldwide.
+              <br/>Service first. Technology forward.
+            </p>
+          </div>
+
+          <div>
+            <label for="message">What are you looking to improve?</label>
+            <textarea id="message" placeholder="Example: Improve compliance + get stakeholder-ready reporting across multiple locations."></textarea>
+
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn btn-primary" type="button">Submit</button>
+              <a class="btn btn-outline" href="#">Client Login</a>
+            </div>
+
+            <p class="small">
+              Note: Wire this to your form handler/CRM. This is a front-end placeholder.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <div>© <span id="yr"></span> Balboa Travel</div>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Tabs
+    const tabButtons = Array.from(document.querySelectorAll('.tabbtn'));
+    const panes = {
+      support: document.getElementById('pane-support'),
+      policy: document.getElementById('pane-policy'),
+      reporting: document.getElementById('pane-reporting'),
+    };
+
+    function activate(tabKey){
+      tabButtons.forEach(btn => {
+        const isActive = btn.dataset.tab === tabKey;
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      Object.keys(panes).forEach(k => panes[k].classList.toggle('active', k === tabKey));
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => activate(btn.dataset.tab));
+    });
+
+    // Optional: close other FAQs when one opens (comment out if you want multi-open)
+    const faqs = Array.from(document.querySelectorAll('#faq details'));
+    faqs.forEach(d => d.addEventListener('toggle', () => {
+      if (!d.open) return;
+      faqs.forEach(o => { if (o !== d) o.open = false; });
+    }));
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Core boundary -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3"/>
+
+  <!-- Clock face -->
+  <circle cx="60" cy="60" r="10"
+          fill="white" stroke="#2A85BE" stroke-width="2.4"/>
+
+  <!-- Clock hands -->
+  <path d="M60 60V54"
+        stroke="#273A7F" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M60 60L65 62"
+        stroke="#273A7F" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- Center pin -->
+  <circle cx="60" cy="60" r="1.6" fill="#273A7F"/>
+</svg>

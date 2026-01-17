@@ -1,0 +1,34 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Core boundary -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3"/>
+
+  <!-- Top node -->
+  <circle cx="60" cy="50" r="3.5" fill="white" stroke="#5e6367" stroke-width="2"/>
+
+  <!-- Vertical connector -->
+  <path d="M60 53.5V58"
+        stroke="#BCBEC0" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- Horizontal split (BEHIND decision node) -->
+  <path d="M54 63.5H57.5"
+        stroke="#BCBEC0" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M62.5 63.5H66"
+        stroke="#BCBEC0" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- Center decision node (diamond) -->
+  <rect x="57" y="58" width="6" height="6"
+        transform="rotate(45 60 61)"
+        fill="white" stroke="#273a7f" stroke-width="1.6"/>
+
+  <!-- Down connectors -->
+  <path d="M54 63.5V68"
+        stroke="#BCBEC0" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M66 63.5V68"
+        stroke="#BCBEC0" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- Bottom nodes -->
+  <rect x="50.5" y="68" width="5" height="5" rx="1"
+        fill="white" stroke="#273a7f" stroke-width="2"/>
+  <rect x="64.5" y="68" width="5" height="5" rx="1"
+        fill="white" stroke="#0cbb19" stroke-width="2"/>
+</svg>

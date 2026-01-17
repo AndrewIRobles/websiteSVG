@@ -1,0 +1,26 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Core boundary -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3"/>
+
+  <!-- Skyline silhouettes (shifted +1px from previous version) -->
+  <!-- Left tower -->
+  <rect x="49.5" y="56" width="6.5" height="12" rx="1.2"
+        fill="white" stroke="#2A85BE" stroke-width="2.2"/>
+  <!-- Center tower -->
+  <rect x="57" y="52" width="8" height="16" rx="1.2"
+        fill="white" stroke="#2A85BE" stroke-width="2.2"/>
+  <!-- Right tower -->
+  <rect x="66.5" y="57" width="5.5" height="11" rx="1.2"
+        fill="white" stroke="#2A85BE" stroke-width="2.2"/>
+
+  <!-- Windows (subtle) -->
+<path d="M59 55.5H62 M59 58H62 M59 60.5H62 M59 63H62"
+      stroke="#BCBEC0" stroke-width="1.6" stroke-linecap="round"/>
+
+  <path d="M51.5 59H54.5M51.5 61.5H54.5M67.8 60H70.2M67.8 62.5H70.2"
+        stroke="#BCBEC0" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- Ground line -->
+  <path d="M48 68H72"
+        stroke="#273A7F" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

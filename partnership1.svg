@@ -1,0 +1,19 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Core boundary (same footprint as your center-only icons) -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3" fill="white"/>
+
+  <!-- Left person (simple) -->
+  <circle cx="54.5" cy="54.5" r="2.8" fill="#0CBB19"/>
+  <path d="M51.8 62.2C52.8 59.4 53.9 58.2 54.5 58.2C55.1 58.2 56.2 59.4 57.2 62.2"
+        stroke="#2A85BE" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Right person (simple) -->
+  <circle cx="65.5" cy="54.5" r="2.8" fill="#0CBB19"/>
+  <path d="M62.8 62.2C63.8 59.4 64.9 58.2 65.5 58.2C66.1 58.2 67.2 59.4 68.2 62.2"
+        stroke="#2A85BE" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Agreement check badge -->
+  <circle cx="60" cy="66.0" r="6.3" stroke="#273A7F" stroke-width="2.4" fill="white"/>
+  <path d="M57.4 66.0L59.2 67.8L62.9 64.1"
+        stroke="#0CBB19" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
