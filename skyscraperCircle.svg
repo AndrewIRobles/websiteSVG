@@ -1,0 +1,90 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <clipPath id="badgeClip">
+      <circle cx="150" cy="150" r="136"/>
+    </clipPath>
+  </defs>
+
+  <!-- Badge background -->
+  <circle cx="150" cy="150" r="136" fill="#2a85be"/>
+  <circle cx="150" cy="150" r="136" fill="none" stroke="#273a7f" stroke-width="12"/>
+
+  <g clip-path="url(#badgeClip)">
+    <g transform="translate(73,32) scale(0.70)">
+
+      <!-- Spire -->
+      <polygon points="110,15 104,140 116,140" fill="#273a7f"/>
+
+      <!-- Top chevrons -->
+      <polygon points="110,140 70,160 110,175 150,160" fill="#273a7f"/>
+      <polygon points="110,155 82,170 110,182 138,170" fill="#273a7f"/>
+      <polygon points="110,168 92,178 110,186 128,178" fill="#273a7f"/>
+
+      <!-- Tower silhouette -->
+      <polygon points="70,160 38,182 38,360 70,380" fill="#273a7f"/>
+      <polygon points="150,160 182,182 182,360 150,380" fill="#273a7f"/>
+      <polygon points="110,175 70,160 70,380 110,402" fill="#273a7f"/>
+      <polygon points="110,175 150,160 150,380 110,402" fill="#273a7f"/>
+
+      <!-- ===== TOP BAND CONNECTORS (fill the gaps between the top windows) ===== -->
+      <!-- These are drawn in absolute coords to match the window groups' translate offsets:
+           Left/Right top window group is y-8, Center top window group is y+6. -->
+
+      <!-- Connect LEFT top window to CENTER-left top window -->
+      <polygon points="70,184 92,196 92,208 70,196" fill="#2a85be"/>
+
+      <!-- Connect CENTER-right top window to RIGHT top window -->
+      <polygon points="128,196 150,184 150,196 128,208" fill="#2a85be"/>
+
+      <!-- LEFT FACE windows (moved UP) -->
+      <g transform="translate(0,-8)">
+        <!-- top window (kept) -->
+        <polygon points="70,192 48,178 48,190 70,204" fill="#2a85be"/>
+
+        <polygon points="70,222 48,208 48,220 70,234" fill="#0cbb19"/>
+        <polygon points="70,252 48,238 48,250 70,264" fill="#bcbec0"/>
+        <polygon points="70,282 48,268 48,280 70,294" fill="#2a85be"/>
+        <polygon points="70,312 48,298 48,310 70,324" fill="#0cbb19"/>
+        <polygon points="70,342 48,328 48,340 70,354" fill="#bcbec0"/>
+      </g>
+
+      <!-- RIGHT FACE windows (moved UP) -->
+      <g transform="translate(0,-8)">
+        <!-- top window (kept) -->
+        <polygon points="150,192 172,178 172,190 150,204" fill="#2a85be"/>
+
+        <polygon points="150,222 172,208 172,220 150,234" fill="#2a85be"/>
+        <polygon points="150,252 172,238 172,250 150,264" fill="#bcbec0"/>
+        <polygon points="150,282 172,268 172,280 150,294" fill="#0cbb19"/>
+        <polygon points="150,312 172,298 172,310 150,324" fill="#2a85be"/>
+        <polygon points="150,342 172,328 172,340 150,354" fill="#bcbec0"/>
+      </g>
+
+      <!-- CENTER FACE windows (moved DOWN) -->
+      <g transform="translate(0,6)">
+        <!-- top windows (kept) -->
+        <polygon points="110,202 92,190 92,202 110,214" fill="#2a85be"/>
+        <polygon points="110,202 128,190 128,202 110,214" fill="#2a85be"/>
+
+        <polygon points="110,232 92,220 92,232 110,244" fill="#bcbec0"/>
+        <polygon points="110,262 92,250 92,262 110,274" fill="#0cbb19"/>
+        <polygon points="110,292 92,280 92,292 110,304" fill="#2a85be"/>
+        <polygon points="110,322 92,310 92,322 110,334" fill="#bcbec0"/>
+        <polygon points="110,352 92,340 92,352 110,364" fill="#0cbb19"/>
+
+        <polygon points="110,232 128,220 128,232 110,244" fill="#2a85be"/>
+        <polygon points="110,262 128,250 128,262 110,274" fill="#bcbec0"/>
+        <polygon points="110,292 128,280 128,292 110,304" fill="#0cbb19"/>
+        <polygon points="110,322 128,310 128,322 110,334" fill="#2a85be"/>
+        <polygon points="110,352 128,340 128,352 110,364" fill="#bcbec0"/>
+      </g>
+
+      <!-- Top face seams -->
+      <line x1="70" y1="150" x2="110" y2="175" stroke="#2a85be" stroke-width="3"/>
+      <line x1="150" y1="150" x2="110" y2="175" stroke="#2a85be" stroke-width="3"/>
+
+    </g>
+  </g>
+
+</svg>

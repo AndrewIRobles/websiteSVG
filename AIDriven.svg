@@ -1,57 +1,51 @@
 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-  <!-- Dotted ecosystem ring -->
-  <circle cx="60" cy="60" r="36"
-          stroke="#BCBEC0"
-          stroke-width="2.5"
-          stroke-dasharray="4 6"/>
-
-  <!-- Outer node circles -->
-  <circle cx="60" cy="24" r="9.5"
-          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
-  <circle cx="28" cy="82" r="9.5"
-          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
-  <circle cx="92" cy="82" r="9.5"
-          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
-
   <!-- Central core -->
-  <circle cx="60" cy="60" r="18"
-          stroke="#273A7F" stroke-width="3" fill="white"/>
+  <circle cx="60" cy="60" r="36"
+          stroke="#273A7F" stroke-width="3" fill="#ffffff"/>
 
   <!-- Lightbulb outline -->
-  <path d="M60 44
-           C53.5 44 48.5 49 48.5 55
-           C48.5 59.5 51.2 62.8 54.2 64.8
-           C55.4 65.6 56 66.8 56 68V69
-           H64V68
-           C64 66.8 64.6 65.6 65.8 64.8
-           C68.8 62.8 71.5 59.5 71.5 55
-           C71.5 49 66.5 44 60 44Z"
+  <path d="M60 28
+           C47 28 37 38 37 50
+           C37 59 42.4 65.6 48.4 69.6
+           C50.8 71.2 52 73.6 52 76V78
+           H68V76
+           C68 73.6 69.2 71.2 71.6 69.6
+           C77.6 65.6 83 59 83 50
+           C83 38 73 28 60 28Z"
         stroke="#273A7F"
-        stroke-width="2.5"
-        fill="none"
+        stroke-width="3"
+        fill="#0CBB19"
         stroke-linecap="round"
         stroke-linejoin="round"/>
 
   <!-- Bulb base -->
-  <path d="M56 71H64"
+  <path d="M52 82H68"
         stroke="#2A85BE"
-        stroke-width="2.5"
+        stroke-width="4"
         stroke-linecap="round"/>
-  <path d="M57 74H63"
+  <path d="M54 88H66"
         stroke="#2A85BE"
-        stroke-width="2.5"
+        stroke-width="3"
         stroke-linecap="round"/>
 
+  <!-- Outer node circles -->
+  <!-- <circle cx="60" cy="24" r="9.5"
+          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="28" cy="82" r="9.5"
+          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="92" cy="82" r="9.5"
+          stroke="#2A85BE" stroke-width="2.5" fill="white"/> -->
+
   <!-- Line chart (top node) -->
-  <path d="M55 26L58 23L61 25L64 21"
+  <!-- <path d="M55 26L58 23L61 25L64 21"
         stroke="#273A7F"
         stroke-width="2"
         stroke-linecap="round"
-        stroke-linejoin="round"/>
+        stroke-linejoin="round"/> -->
 
   <!-- Pie chart (left node) -->
-  <circle cx="28" cy="82" r="4.5"
+  <!-- <circle cx="28" cy="82" r="4.5"
           stroke="#273A7F"
           stroke-width="2"
           fill="none"/>
@@ -62,10 +56,10 @@
   <path d="M28 82L32 84"
         stroke="#273A7F"
         stroke-width="2"
-        stroke-linecap="round"/>
+        stroke-linecap="round"/> -->
 
   <!-- Bar chart (right node) -->
-  <path d="M88.5 86V82"
+  <!-- <path d="M88.5 86V82"
         stroke="#273A7F"
         stroke-width="2"
         stroke-linecap="round"/>
@@ -76,6 +70,6 @@
   <path d="M95.5 86V80"
         stroke="#273A7F"
         stroke-width="2"
-        stroke-linecap="round"/>
+        stroke-linecap="round"/> -->
 
 </svg>

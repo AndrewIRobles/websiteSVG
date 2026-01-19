@@ -1,0 +1,34 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid ecosystem ring (no dotted lines) -->
+  <circle cx="60" cy="60" r="36" stroke="#BCBEC0" stroke-width="2.5"/>
+
+  <!-- Outer nodes -->
+  <circle cx="60" cy="24" r="9.5" stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="28" cy="82" r="9.5" stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="92" cy="82" r="9.5" stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+
+  <!-- TOP NODE: Chat bubble -->
+  <rect x="55.2" y="20.2" width="9.6" height="6.8" rx="2"
+        stroke="#273A7F" stroke-width="2"/>
+  <path d="M58.2 27L57.2 28.8L59.8 27"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- LEFT NODE: Checkmark -->
+  <path d="M24.8 82.2L27.2 84.6L31.4 80.4"
+        stroke="#273A7F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- RIGHT NODE: Small badge/star -->
+  <path d="M92 77.9L93.3 81.0L96.7 81.2L94.1 83.4L95.0 86.7L92 84.9L89.0 86.7L89.9 83.4L87.3 81.2L90.7 81.0L92 77.9Z"
+        stroke="#273A7F" stroke-width="2" fill="white" stroke-linejoin="round"/>
+
+  <!-- Central core -->
+  <circle cx="60" cy="60" r="18" stroke="#273A7F" stroke-width="3" fill="white"/>
+
+  <!-- Person icon -->
+  <circle cx="60" cy="56" r="5.2" stroke="#273A7F" stroke-width="2.5" fill="white"/>
+  <path d="M50.5 70.2C52.8 65.2 56.2 63 60 63C63.8 63 67.2 65.2 69.5 70.2"
+        stroke="#2A85BE" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Consultant badge -->
+
+</svg>

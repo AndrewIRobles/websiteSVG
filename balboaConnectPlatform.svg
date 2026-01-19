@@ -3,45 +3,45 @@
      xmlns="http://www.w3.org/2000/svg"
      fill="none">
 
-  <!-- Dotted ecosystem ring -->
+  <!-- Central platform core -->
   <circle cx="60" cy="60" r="36"
-          stroke="#BCBEC0"
-          stroke-width="2.5"
-          stroke-dasharray="4 6"/>
+          stroke="#273A7F" stroke-width="3" fill="white"/>
+
+  <!-- Laptop -->
+  <rect x="38" y="48" width="44" height="28" rx="5"
+        stroke="#273A7F" stroke-width="2.5"/>
+  <path d="M34 78H86"
+        stroke="#273A7F" stroke-width="2.5"
+        stroke-linecap="round"/>
+  <path d="M44 68L52 60L60 64L68 56L76 60"
+        stroke="#0CBB19" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Phone -->
+  <rect x="66" y="44" width="20" height="36" rx="5"
+        stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="76" cy="73" r="1.8" fill="#2A85BE"/>
+  <circle cx="76" cy="62" r="6"
+          stroke="#2A85BE" stroke-width="2" fill="white"/>
+  <path d="M70 62H82M76 56V68M72 59.5C74 60.8 78 60.8 80 59.5M72 64.5C74 63.2 78 63.2 80 64.5"
+        stroke="#2A85BE" stroke-width="1.5" stroke-linecap="round"/>
 
   <!-- Outer node circles -->
-  <circle cx="60" cy="24" r="9.5"
+  <!-- <circle cx="60" cy="24" r="9.5"
           stroke="#2A85BE" stroke-width="2.5" fill="white"/>
   <circle cx="28" cy="82" r="9.5"
           stroke="#2A85BE" stroke-width="2.5" fill="white"/>
   <circle cx="92" cy="82" r="9.5"
-          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
-
-  <!-- Central platform core -->
-  <circle cx="60" cy="60" r="18"
-          stroke="#273A7F" stroke-width="3" fill="white"/>
-
-  <!-- Laptop -->
-  <rect x="49" y="54" width="22" height="14" rx="2.5"
-        stroke="#273A7F" stroke-width="2.5"/>
-  <path d="M47 69H73"
-        stroke="#273A7F" stroke-width="2.5"
-        stroke-linecap="round"/>
-
-  <!-- Phone -->
-  <rect x="63" y="52" width="10" height="18" rx="2.5"
-        stroke="#2A85BE" stroke-width="2.5" fill="white"/>
-  <circle cx="68" cy="66.5" r="0.9" fill="#2A85BE"/>
+          stroke="#2A85BE" stroke-width="2.5" fill="white"/> -->
 
   <!-- TOP NODE: Chat Bubble (centered, contained) -->
-  <rect x="55.4" y="19.8" width="9.2" height="6.6" rx="2"
+  <!-- <rect x="55.4" y="19.8" width="9.2" height="6.6" rx="2"
         stroke="#273A7F" stroke-width="2" fill="none"/>
   <path d="M58.2 26.4L57.2 28.2L59.6 26.4"
         stroke="#273A7F" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round"/>
+        stroke-linecap="round" stroke-linejoin="round"/> -->
 
   <!-- LEFT NODE: Document -->
-  <rect x="24.2" y="77" width="7.8" height="10"
+  <!-- <rect x="24.2" y="77" width="7.8" height="10"
         rx="1.6"
         stroke="#273A7F"
         stroke-width="2"/>
@@ -56,18 +56,18 @@
   <path d="M25.8 85.6H28.8"
         stroke="#273A7F"
         stroke-width="1.4"
-        stroke-linecap="round"/>
+        stroke-linecap="round"/> -->
 
   <!-- RIGHT NODE: Tools (gear) -->
-  <circle cx="92" cy="82" r="4.2"
+  <!-- <circle cx="92" cy="82" r="4.2"
           stroke="#273A7F"
           stroke-width="2"/>
   <circle cx="92" cy="82" r="1.7"
           stroke="#273A7F"
-          stroke-width="2"/>
+          stroke-width="2"/> -->
 
   <!-- Gear teeth -->
-  <path d="M92 75.8V77.2
+  <!-- <path d="M92 75.8V77.2
            M92 86.8V88.2
            M85.8 82H87.2
            M96.8 82H98.2
@@ -77,5 +77,5 @@
            M95.4 78.6L96.4 77.6"
         stroke="#273A7F"
         stroke-width="2"
-        stroke-linecap="round"/>
+        stroke-linecap="round"/> -->
 </svg>

@@ -944,11 +944,10 @@
         </div>
 
         <div class="tabs">
-<button class="tab-btn active" onclick="switchTab('global')">Global Operations</button>
-<button class="tab-btn" onclick="switchTab('compliance')">Policy & Compliance</button>
-<button class="tab-btn" onclick="switchTab('volume')">High Volume</button>
-        </div>  
-
+            <button class="tab-btn active" data-tab="global" type="button">Global Operations</button>
+            <button class="tab-btn" data-tab="compliance" type="button">Policy & Compliance</button>
+            <button class="tab-btn" data-tab="volume" type="button">High Volume</button>
+        </div>
         <div id="global" class="tab-content active">
             <div class="use-case-grid">
                 <div class="use-case-card">
@@ -1201,9 +1200,9 @@
         </div>
     </footer>
 
-    <script>
+    <!-- <script>
         // Tab switching
-  function switchTab(tabName) {
+  function switchTab(tabName, el) {
     // Hide all tab contents
     document.querySelectorAll('.tab-content').forEach(content => {
       content.classList.remove('active');
@@ -1218,14 +1217,45 @@
     const targetTab = document.getElementById(tabName);
     if (targetTab) targetTab.classList.add('active');
 
-    // Activate the matching button (no event needed)
-    const clickedButton = Array.from(document.querySelectorAll('.tab-btn')).find(
-      btn => btn.getAttribute('onclick')?.includes(`'${tabName}'`) || btn.getAttribute('onclick')?.includes(`"${tabName}"`)
-    );
-    if (clickedButton) clickedButton.classList.add('active');
+    // Activate the clicked button directly
+    if (el) el.classList.add('active');
   }
 
 //switch tab end
+  function initTabs() {
+    logTabDebug('initTabs()');
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      if (btn.dataset.bound === 'true') return;
+      btn.dataset.bound = 'true';
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab, btn));
+    });
+  }
+
+  initTabs();
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) initTabs();
+  });
+
+  function logTabDebug(message) {
+    let debug = document.getElementById('tab-debug');
+    if (!debug) {
+      debug = document.createElement('div');
+      debug.id = 'tab-debug';
+      debug.style.position = 'fixed';
+      debug.style.right = '12px';
+      debug.style.bottom = '12px';
+      debug.style.padding = '6px 8px';
+      debug.style.background = 'rgba(0, 0, 0, 0.6)';
+      debug.style.color = '#fff';
+      debug.style.fontSize = '10px';
+      debug.style.fontFamily = 'Arial, sans-serif';
+      debug.style.borderRadius = '4px';
+      debug.style.zIndex = '9999';
+      document.body.appendChild(debug);
+    }
+    const time = new Date().toLocaleTimeString();
+    debug.textContent = `Tabs debug: ${message} @ ${time}`;
+  }
         // FAQ toggle
         function toggleFAQ(element) {
             const faqItem = element.parentElement;
@@ -1301,7 +1331,27 @@
             observer.observe(statsSection);
         }
 
-    </script>   
+    </script>    -->
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+
 </body>
 
 </html>

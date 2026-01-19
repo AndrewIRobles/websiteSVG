@@ -1,27 +1,21 @@
 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-  <!-- Dotted ecosystem ring -->
-  <circle cx="60" cy="60" r="44"
-          stroke="#BCBEC0"
-          stroke-width="2.5"
-          stroke-dasharray="4 6"/>
-
   <!-- Central circuit board -->
-  <rect x="42" y="42" width="36" height="36" rx="6"
+  <rect x="16" y="16" width="88" height="88" rx="6"
         stroke="#273A7F" stroke-width="3" fill="white"/>
 
   <!-- Circuit traces -->
-  <path d="M48 60H72" stroke="#2A85BE" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M60 48V72" stroke="#2A85BE" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M52 52L68 68" stroke="#2A85BE" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M30.67 60H89.33" stroke="#2A85BE" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M60 30.67V89.33" stroke="#2A85BE" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M40.44 40.44L79.56 79.56" stroke="#2A85BE" stroke-width="2.5" stroke-linecap="round"/>
 
   <!-- Circuit nodes -->
-  <circle cx="48" cy="60" r="3" fill="#0CBB19"/>
-  <circle cx="72" cy="60" r="3" fill="#0CBB19"/>
-  <circle cx="60" cy="48" r="3" fill="#0CBB19"/>
-  <circle cx="60" cy="72" r="3" fill="#0CBB19"/>
-  <circle cx="52" cy="52" r="3" fill="#0CBB19"/>
-  <circle cx="68" cy="68" r="3" fill="#0CBB19"/>
+  <circle cx="30.67" cy="60" r="4.58125" fill="#0CBB19"/>
+  <circle cx="89.33" cy="60" r="4.58125" fill="#0CBB19"/>
+  <circle cx="60" cy="30.67" r="4.58125" fill="#0CBB19"/>
+  <circle cx="60" cy="89.33" r="4.58125" fill="#0CBB19"/>
+  <circle cx="40.44" cy="40.44" r="4.58125" fill="#0CBB19"/>
+  <circle cx="79.56" cy="79.56" r="4.58125" fill="#0CBB19"/>
 
   <!-- Air -->
   <circle cx="60" cy="14" r="10"

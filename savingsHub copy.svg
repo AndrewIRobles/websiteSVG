@@ -1,0 +1,59 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Dotted ecosystem ring (adjusted to intersect the node circles) -->
+  <circle cx="60" cy="60" r="36"
+          stroke="#BCBEC0"
+          stroke-width="2.5"
+          stroke-dasharray="4 6"/>
+
+  <!-- Central hub -->
+  <circle cx="60" cy="60" r="16"
+          stroke="#273A7F" stroke-width="3" fill="white"/>
+
+  <!-- Dollar sign -->
+  <path d="M60 46V74"
+        stroke="#0CBB19" stroke-width="3"
+        stroke-linecap="round"/>
+  <path d="M66 50H56C53 50 51 52 51 55C51 58 53 60 56 60H64C67 60 69 62 69 65C69 68 67 70 64 70H54"
+        stroke="#0CBB19" stroke-width="3"
+        stroke-linecap="round"/>
+
+  <!-- Node circles (sit on the orbit) -->
+  <circle cx="60" cy="24" r="9.5"
+          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="28" cy="82" r="9.5"
+          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+  <circle cx="92" cy="82" r="9.5"
+          stroke="#2A85BE" stroke-width="2.5" fill="white"/>
+
+  <!-- Plane icon (side profile) -->
+  <path d="M55 24H65"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M58 22L55 24L58 26"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M61 24L63 21"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M61 24L63 27"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Hotel icon -->
+  <rect x="24.2" y="77.0" width="7.6" height="10.0" rx="1.5"
+        stroke="#273A7F" stroke-width="2" fill="none"/>
+  <path d="M26.4 80.2H29.6"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M26.4 83.0H29.6"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M28.0 87.0V85.0"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Car icon -->
+  <path d="M87.5 84.0H96.5"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M89.2 81.0H94.8"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M88.8 84.0L90.0 80.8H94.0L95.2 84.0"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="89.4" cy="85.6" r="1.4" fill="#273A7F"/>
+  <circle cx="94.6" cy="85.6" r="1.4" fill="#273A7F"/>
+
+</svg>

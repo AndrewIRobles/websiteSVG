@@ -1,0 +1,61 @@
+<svg viewBox="0 0 220 420" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- ===== Spire ===== -->
+  <polygon points="110,10 104,140 116,140" fill="#000"/>
+
+  <!-- ===== Top chevrons ===== -->
+  <polygon points="110,140 70,160 110,175 150,160" fill="#000"/>
+  <polygon points="110,155 82,170 110,182 138,170" fill="#000"/>
+  <polygon points="110,168 92,178 110,186 128,178" fill="#000"/>
+
+  <!-- ===== Main tower silhouette ===== -->
+  <!-- Left outer face -->
+  <polygon points="70,160 38,182 38,360 70,380" fill="#000"/>
+  <!-- Right outer face -->
+  <polygon points="150,160 182,182 182,360 150,380" fill="#000"/>
+  <!-- Center faces -->
+  <polygon points="110,175 70,160 70,380 110,402" fill="#000"/>
+  <polygon points="110,175 150,160 150,380 110,402" fill="#000"/>
+
+  <!-- ===== Center white spine ===== -->
+  <rect x="106" y="200" width="8" height="200" fill="#black"/>
+
+  <!-- ===== LEFT FACE window bands (downward slope) ===== -->
+  <g fill="#fff">
+    <polygon points="70,192 48,178 48,190 70,204"/>
+    <polygon points="70,222 48,208 48,220 70,234"/>
+    <polygon points="70,252 48,238 48,250 70,264"/>
+    <polygon points="70,282 48,268 48,280 70,294"/>
+    <polygon points="70,312 48,298 48,310 70,324"/>
+    <polygon points="70,342 48,328 48,340 70,354"/>
+  </g>
+
+  <!-- ===== RIGHT FACE window bands (downward slope) ===== -->
+  <g fill="#fff">
+    <polygon points="150,192 172,178 172,190 150,204"/>
+    <polygon points="150,222 172,208 172,220 150,234"/>
+    <polygon points="150,252 172,238 172,250 150,264"/>
+    <polygon points="150,282 172,268 172,280 150,294"/>
+    <polygon points="150,312 172,298 172,310 150,324"/>
+    <polygon points="150,342 172,328 172,340 150,354"/>
+  </g>
+
+  <!-- ===== CENTER FACE window bands (downward V pattern) ===== -->
+  <g fill="#fff">
+    <!-- left half -->
+    <polygon points="110,202 92,190 92,202 110,214"/>
+    <polygon points="110,232 92,220 92,232 110,244"/>
+    <polygon points="110,262 92,250 92,262 110,274"/>
+    <polygon points="110,292 92,280 92,292 110,304"/>
+    <polygon points="110,322 92,310 92,322 110,334"/>
+    <polygon points="110,352 92,340 92,352 110,364"/>
+    <!-- right half -->
+    <polygon points="110,202 128,190 128,202 110,214"/>
+    <polygon points="110,232 128,220 128,232 110,244"/>
+    <polygon points="110,262 128,250 128,262 110,274"/>
+    <polygon points="110,292 128,280 128,292 110,304"/>
+    <polygon points="110,322 128,310 128,322 110,334"/>
+    <polygon points="110,352 128,340 128,352 110,364"/>
+  </g>
+
+</svg>

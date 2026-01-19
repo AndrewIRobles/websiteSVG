@@ -1,0 +1,50 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Central circuit board -->
+  <rect x="16" y="16" width="88" height="88" rx="6"
+        stroke="#273A7F" stroke-width="3" fill="white"/>
+
+  <!-- Circuit traces -->
+  <path d="M24 28H44V40H56" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 40H80V32H96" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 44V68H36V88" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 88H52V72H68" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 72H88V88H96" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 56H44V64H60" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 64H76V52H92" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 28V52H40" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M72 44V60H84" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 84V96" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M72 80V96" stroke="#0CBB19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+ 
+  <!-- Processor chip -->
+  <rect x="44" y="44" width="32" height="32" rx="2"
+        fill="#273A7F"/>
+  <path d="M48 44V40M54 44V40M60 44V40M66 44V40M72 44V40"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M48 76V80M54 76V80M60 76V80M66 76V80M72 76V80"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M44 48H40M44 54H40M44 60H40M44 66H40M44 72H40"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M76 48H80M76 54H80M76 60H80M76 66H80M76 72H80"
+        stroke="#273A7F" stroke-width="2" stroke-linecap="round"/>
+  <!-- Circuit nodes -->
+  <circle cx="24" cy="28" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+
+  <circle cx="96" cy="32" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+  <circle cx="24" cy="44" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+  <circle cx="36" cy="88" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+
+  <circle cx="96" cy="88" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+
+  <circle cx="92" cy="52" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+  <circle cx="48" cy="28" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+<!--   
+  <circle cx="40" cy="52" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/> -->
+
+
+  <circle cx="84" cy="60" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+  
+  <circle cx="52" cy="96" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+  <circle cx="72" cy="96" r="4" fill="white" stroke="#0CBB19" stroke-width="3"/>
+ 
+</svg>
